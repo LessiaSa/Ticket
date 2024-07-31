@@ -9,26 +9,31 @@ public class Ticket implements Comparable<Ticket> {
     private int timeFrom;
     private int timeTo;
 
-    public Ticket(String from, String to, int price,int timeFrom, int timeTo) {
+    public Ticket(String from, String to, int price, int timeFrom, int timeTo) {
         this.from = from;
         this.to = to;
         this.price = price;
         this.timeFrom = timeFrom;
         this.timeTo = timeTo;
     }
+
     public String getFrom() {
         return from;
     }
+
     public String getTo() {
         return to;
     }
+
     public int getPrice() {
         return price;
     }
-    public int timeFrom() {
+
+    public int getTimeFrom() {
         return timeFrom;
     }
-    public int timeTo(){
+
+    public int getTimeTo() {
         return timeTo;
     }
 
@@ -44,12 +49,12 @@ public class Ticket implements Comparable<Ticket> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(from,to,price,timeFrom,timeTo);
+        return Objects.hash(from, to, price, timeFrom, timeTo);
     }
 
     @Override
     public int compareTo(Ticket o) {
-        if (this.price <o.price) {
+        if (this.price < o.price) {
             return -1;
         } else if (this.price > o.price) {
             return 1;
